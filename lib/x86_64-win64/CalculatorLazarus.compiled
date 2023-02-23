@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="G:\Lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1429738194"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiG:\GitHub\CPD_Lab2_Calculator\lib\x86_64-win64 &quot;-FuG:\Coding stuff\Calculator(lazarus)&quot; -FuG:\Lazarus\lcl\units\x86_64-win64\win32 -FuG:\Lazarus\lcl\units\x86_64-win64 -FuG:\Lazarus\components\freetype\lib\x86_64-win64 -FuG:\Lazarus\components\lazutils\lib\x86_64-win64 -FuG:\Lazarus\packager\units\x86_64-win64 -FuG:\GitHub\CPD_Lab2_Calculator\ -FUG:\GitHub\CPD_Lab2_Calculator\lib\x86_64-win64\ -FEG:\GitHub\CPD_Lab2_Calculator\ -oG:\GitHub\CPD_Lab2_Calculator\CalculatorLazarus.exe -dLCL -dLCLwin32 CalculatorLazarus.lpr"/>
+  <Compiler Value="G:\Lazarus\fpc\bin\x86_64-win64\fpc.exe" Date="1448572519"/>
+  <Params Value=" -Twin64 -Px86_64 -MObjFPC -Scghi -O2 -WG -l -vewnhibq -FiG:\GitHub\CPD_Lab2_Calculator\lib\x86_64-win64 -FuG:\Lazarus\lazarus\lcl\units\x86_64-win64\win32 -FuG:\Lazarus\lazarus\lcl\units\x86_64-win64 -FuG:\Lazarus\lazarus\components\freetype\lib\x86_64-win64 -FuG:\Lazarus\lazarus\components\lazutils\lib\x86_64-win64 -FuG:\Lazarus\lazarus\packager\units\x86_64-win64 -FuG:\GitHub\CPD_Lab2_Calculator\ -FUG:\GitHub\CPD_Lab2_Calculator\lib\x86_64-win64\ -FEG:\GitHub\CPD_Lab2_Calculator\ -oG:\GitHub\CPD_Lab2_Calculator\CalculatorLazarus_win64_x86_64.exe -dLCL -dLCLwin32 CalculatorLazarus.lpr"/>
 </CONFIG>
