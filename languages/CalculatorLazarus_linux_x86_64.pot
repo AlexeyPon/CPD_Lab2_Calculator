@@ -1,0 +1,115 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: calculator.divzero
+msgid "Cannot divide by zero"
+msgstr ""
+
+#: calculator.smtwrong
+msgid "Something went wrong"
+msgstr ""
+
+#: tformcalculator.caption
+msgid "SimpleCalculator"
+msgstr ""
+
+#: tformcalculator.changesignbutton.caption
+msgid "+/-"
+msgstr ""
+
+#: tformcalculator.clearallbutton.caption
+msgid "CE"
+msgstr ""
+
+#: tformcalculator.clearbutton.caption
+msgid "Clear"
+msgstr ""
+
+#: tformcalculator.commabutton.caption
+msgid ","
+msgstr ""
+
+#: tformcalculator.deletebutton.caption
+msgid "Delete"
+msgstr ""
+
+#: tformcalculator.dividebutton.caption
+msgid "÷"
+msgstr ""
+
+#: tformcalculator.eightbutton.caption
+msgid "8"
+msgstr ""
+
+#: tformcalculator.fivebutton.caption
+msgid "5"
+msgstr ""
+
+#: tformcalculator.fourbutton.caption
+msgid "4"
+msgstr ""
+
+#: tformcalculator.inversebutton.caption
+msgid "1/x"
+msgstr ""
+
+#: tformcalculator.minusbutton.caption
+msgid "-"
+msgstr ""
+
+#: tformcalculator.multiplybutton.caption
+msgid "×"
+msgstr ""
+
+#: tformcalculator.ninebutton.caption
+msgid "9"
+msgstr ""
+
+#: tformcalculator.onebutton.caption
+msgid "1"
+msgstr ""
+
+#: tformcalculator.percentbutton.caption
+msgid "%"
+msgstr ""
+
+#: tformcalculator.plusbutton.caption
+msgid "+"
+msgstr ""
+
+#: tformcalculator.resultbutton.caption
+msgid "="
+msgstr ""
+
+#: tformcalculator.resultmemo.hint
+msgid "Result"
+msgstr ""
+
+#: tformcalculator.sevenbutton.caption
+msgid "7"
+msgstr ""
+
+#: tformcalculator.sixbutton.caption
+msgid "6"
+msgstr ""
+
+#: tformcalculator.sqrtbutton.caption
+msgid "Sqrt"
+msgstr ""
+
+#: tformcalculator.squarebutton.caption
+msgid "Sq"
+msgstr ""
+
+#: tformcalculator.threebutton.caption
+msgid "3"
+msgstr ""
+
+#: tformcalculator.twobutton.caption
+msgid "2"
+msgstr ""
+
+#: tformcalculator.zerobutton.caption
+msgid "0"
+msgstr ""
+

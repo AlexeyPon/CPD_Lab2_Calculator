@@ -4,16 +4,14 @@
     <PathDelim Value="\"/>
     <Version Value="12"/>
     <ManyBuildModesSelection Value="&quot;Linux x64 Release&quot;,&quot;Windows x64 Release&quot;"/>
-    <BuildModes Active="Windows x64 Release"/>
+    <BuildModes Active="Linux x64 Release"/>
     <Units>
       <Unit>
         <Filename Value="CalculatorLazarus.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <CursorPos X="36" Y="13"/>
+        <UsageCount Value="40"/>
       </Unit>
       <Unit>
         <Filename Value="calculator.pas"/>
@@ -23,129 +21,138 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Calculator"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="26"/>
-        <CursorPos X="32" Y="55"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="8"/>
+        <CursorPos X="14" Y="9"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="scientificform.pas"/>
+        <ComponentName Value="SciCalc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ScientificForm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="35"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="63" Column="36" TopLine="31"/>
+        <Caret Line="112" Column="3" TopLine="102"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="46" Column="15" TopLine="31"/>
+        <Caret Line="171" Column="69" TopLine="161"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="47" Column="14" TopLine="31"/>
+        <Caret Line="206" Column="3" TopLine="204"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="46" Column="44" TopLine="31"/>
+        <Caret Line="162" TopLine="161"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="56" Column="6" TopLine="34"/>
+        <Caret Line="216" Column="44" TopLine="209"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="68" Column="40" TopLine="41"/>
+        <Caret Line="234" Column="69" TopLine="219"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="58" Column="51" TopLine="41"/>
+        <Caret Line="324" Column="31" TopLine="303"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="62" Column="90" TopLine="39"/>
+        <Caret Line="206" Column="3" TopLine="204"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="58" Column="68" TopLine="39"/>
+        <Caret Line="83" Column="37" TopLine="69"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="56" Column="45" TopLine="39"/>
+        <Caret Line="173" Column="48" TopLine="169"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="58" Column="67" TopLine="39"/>
+        <Caret Line="162" Column="36" TopLine="160"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="69" Column="60" TopLine="40"/>
+        <Caret Line="96" Column="30" TopLine="93"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="73" Column="35" TopLine="50"/>
+        <Caret Line="220" Column="98" TopLine="196"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="89" Column="3" TopLine="56"/>
+        <Caret Line="157" Column="7" TopLine="152"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="94" Column="3" TopLine="61"/>
+        <Caret Line="205" Column="55" TopLine="134"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="89" Column="3" TopLine="61"/>
+        <Caret Line="417" Column="25" TopLine="404"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="100" Column="24" TopLine="63"/>
+        <Caret Line="159" Column="110" TopLine="152"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="101" Column="24" TopLine="64"/>
+        <Caret Line="163" Column="110" TopLine="148"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="96" Column="24" TopLine="64"/>
+        <Caret Line="167" Column="110" TopLine="152"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="78" Column="24" TopLine="57"/>
+        <Caret Line="176" Column="110" TopLine="162"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="60" Column="30" TopLine="50"/>
+        <Caret Line="183" Column="110" TopLine="168"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="74" Column="52" TopLine="57"/>
+        <Caret Line="189" Column="110" TopLine="174"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="62" Column="27" TopLine="59"/>
+        <Caret Line="195" Column="110" TopLine="180"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="80" Column="44" TopLine="60"/>
+        <Caret Line="199" Column="62" TopLine="188"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="89" Column="24" TopLine="60"/>
+        <Caret Line="117" Column="4" TopLine="103"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="105" Column="3" TopLine="97"/>
+        <Caret Line="6" Column="24"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="65" Column="26" TopLine="63"/>
+        <Caret Line="366" Column="28" TopLine="358"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="123" Column="50" TopLine="97"/>
+        <Caret Line="64" Column="49" TopLine="51"/>
       </Position>
       <Position>
         <Filename Value="calculator.pas"/>
-        <Caret Line="45" Column="52" TopLine="28"/>
+        <Caret Line="17" Column="42" TopLine="8"/>
       </Position>
     </JumpHistory>
     <RunParams>
