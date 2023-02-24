@@ -1,18 +1,18 @@
 object FormCalculator: TFormCalculator
-  Left = 565
-  Height = 413
+  Left = 561
+  Height = 414
   Top = 98
-  Width = 376
+  Width = 380
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'SimpleCalculator'
-  ClientHeight = 413
-  ClientWidth = 376
+  ClientHeight = 414
+  ClientWidth = 380
   OnCreate = FormCreate
   Position = poWorkAreaCenter
   LCLVersion = '2.2.4.0'
   object ResultMemo: TMemo
-    Left = 8
+    Left = 12
     Height = 89
     Hint = 'Result'
     Top = 8
@@ -29,7 +29,7 @@ object FormCalculator: TFormCalculator
   object EditNum: TEdit
     AnchorSideTop.Control = ResultMemo
     AnchorSideTop.Side = asrBottom
-    Left = 8
+    Left = 12
     Height = 23
     Top = 112
     Width = 358
@@ -42,7 +42,7 @@ object FormCalculator: TFormCalculator
   object StandardBox: TGroupBox
     AnchorSideTop.Control = EditNum
     AnchorSideTop.Side = asrBottom
-    Left = 8
+    Left = 12
     Height = 256
     Top = 150
     Width = 358
@@ -84,7 +84,7 @@ object FormCalculator: TFormCalculator
     object MinusButton: TButton
       Left = 270
       Height = 25
-      Top = 121
+      Top = 120
       Width = 75
       Anchors = [akRight]
       Caption = '-'
@@ -188,12 +188,13 @@ object FormCalculator: TFormCalculator
       Width = 75
       Anchors = [akRight]
       Caption = '2'
+      OnClick = TwoButtonClick
       TabOrder = 13
     end
     object FiveButton: TButton
       Left = 94
       Height = 25
-      Top = 121
+      Top = 120
       Width = 75
       Anchors = [akRight]
       Caption = '5'

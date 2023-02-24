@@ -128,9 +128,9 @@ begin
      begin
 
      end
-  else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] <> '+') then
+  else if (ResultMemo.Lines[0] <> '')and (EditNum.Caption = '') and (ResultMemo.Lines[1] <> '+') then
      begin
-
+      ResultMemo.Lines[1] := '+';
      end
   else if (ResultMemo.Lines[0] = '') and (EditNum.Caption <> '') then
     begin
@@ -139,10 +139,18 @@ begin
       ResultMemo.Lines.Add('+');
       EditNum.Caption:= '';
     end
-  else if (ResultMemo.Lines[1] <> '') and (EditNum.Caption = '') then
-     begin
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
+    begin
+      Flag:= False;
+      ResultMemo.Lines.Clear;
+      ResultMemo.Lines.Add(EditNum.Caption);
+      ResultMemo.Lines.Add('+');
+      EditNum.Caption:= '';
+    end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '+') then
+    begin
       ResultMemo.Lines[1] := '+';
-     end
+    end
   else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] = '+') and (EditNum.Caption <> '') and (Flag = False) then
      begin
       Flag := True;
@@ -163,70 +171,76 @@ end;
 
 procedure TFormCalculator.ResultButtonClick(Sender: TObject);
 begin
+  try
   if (ResultMemo.Lines[0] <> '')and (ResultMemo.Lines[1] <> '') and (EditNum.Caption <> '') then
       if (ResultMemo.Lines[2] = '') then
-        if ResultMemo.Lines[1] = '+' then
+        begin
+              if ResultMemo.Lines[1] = '+' then
+                begin
+                     Flag := True;
+                     ResultMemo.Lines[2] := EditNum.Caption;
+                     ResultMemo.Lines[3] := '=';
+                     EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) + StrToFloat(EditNum.Caption)));
+                end
+              else if  ResultMemo.Lines[1] = '-' then
+                begin
+                     Flag := True;
+                     ResultMemo.Lines[2] := EditNum.Caption;
+                     ResultMemo.Lines[3] := '=';
+                     EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) - StrToFloat(EditNum.Caption)));
+                end
+              else if  ResultMemo.Lines[1] = '×' then
+                begin
+                     Flag := True;
+                     ResultMemo.Lines[2] := EditNum.Caption;
+                     ResultMemo.Lines[3] := '=';
+                     EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(EditNum.Caption)));
+                end
+              else if  (ResultMemo.Lines[1] = '÷') and (EditNum.Caption = '0') then
+                begin
+                     ShowMessage(DivZero);
+                     EditNum.Caption:= '';
+                end
+              else if  ResultMemo.Lines[1] = '÷' then
+                begin
+                     Flag := True;
+                     ResultMemo.Lines[2] := EditNum.Caption;
+                     ResultMemo.Lines[3] := '=';
+                     EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) / StrToFloat(EditNum.Caption)));
+                end
+        end
+      else if (ResultMemo.Lines[3] <> '') then
           begin
-               Flag := True;
-               ResultMemo.Lines[2] := EditNum.Caption;
-               ResultMemo.Lines[3] := '=';
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) + StrToFloat(EditNum.Caption)));
-          end
-        else if  ResultMemo.Lines[1] = '-' then
-          begin
-               Flag := True;
-               ResultMemo.Lines[2] := EditNum.Caption;
-               ResultMemo.Lines[3] := '=';
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) - StrToFloat(EditNum.Caption)));
-          end
-        else if  ResultMemo.Lines[1] = '×' then
-          begin
-               Flag := True;
-               ResultMemo.Lines[2] := EditNum.Caption;
-               ResultMemo.Lines[3] := '=';
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(EditNum.Caption)));
-          end
-        else if  (ResultMemo.Lines[1] = '÷') and (EditNum.Caption = '0') then
-          begin
-               ShowMessage(DivZero);
-               EditNum.Caption:= '';
-          end
-        else if  ResultMemo.Lines[1] = '÷' then
-          begin
-               Flag := True;
-               ResultMemo.Lines[2] := EditNum.Caption;
-               ResultMemo.Lines[3] := '=';
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(EditNum.Caption)));
-          end
-      else if (ResultMemo.Lines[2] <> '') then
-        ShowMessage('ok');
-        if ResultMemo.Lines[1] = '+' then
-          begin
-               ResultMemo.Lines[0] := EditNum.Caption;
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) + StrToFloat(ResultMemo.Lines[2])));
-          end
-        else if  ResultMemo.Lines[1] = '-' then
-          begin
-               ResultMemo.Lines[0] := EditNum.Caption;
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) - StrToFloat(ResultMemo.Lines[2])));
-          end
-        else if  ResultMemo.Lines[1] = '×' then
-          begin
-               ResultMemo.Lines[0] := EditNum.Caption;
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(ResultMemo.Lines[2])));
-          end
-        else if  (ResultMemo.Lines[1] = '÷') and (EditNum.Caption = '0') then
-          begin
-               ShowMessage(DivZero);
-               EditNum.Caption:= '';
-          end
-        else if  ResultMemo.Lines[1] = '÷' then
-          begin
-               ResultMemo.Lines[0] := EditNum.Caption;
-               EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(ResultMemo.Lines[2])));
-          end
-
-
+                if ResultMemo.Lines[1] = '+' then
+                  begin
+                       ResultMemo.Lines[0] := EditNum.Caption;
+                       EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) + StrToFloat(ResultMemo.Lines[2])));
+                  end
+                else if  ResultMemo.Lines[1] = '-' then
+                  begin
+                       ResultMemo.Lines[0] := EditNum.Caption;
+                       EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) - StrToFloat(ResultMemo.Lines[2])));
+                  end
+                else if  ResultMemo.Lines[1] = '×' then
+                  begin
+                       ResultMemo.Lines[0] := EditNum.Caption;
+                       EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) * StrToFloat(ResultMemo.Lines[2])));
+                  end
+                else if  (ResultMemo.Lines[1] = '÷') and (EditNum.Caption = '0') then
+                  begin
+                       ShowMessage(DivZero);
+                       EditNum.Caption:= '';
+                  end
+                else if  ResultMemo.Lines[1] = '÷' then
+                  begin
+                       ResultMemo.Lines[0] := EditNum.Caption;
+                       EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) / StrToFloat(ResultMemo.Lines[2])));
+                  end
+           end
+  except
+    ShowMessage(SmtWrong);
+    Application.Terminate;
+  end;
 end;
 
 procedure TFormCalculator.SevenButtonClick(Sender: TObject);
@@ -241,12 +255,20 @@ end;
 
 procedure TFormCalculator.SqrtButtonClick(Sender: TObject);
 begin
+  try
   EditNum.Caption:= FloatToStr(Sqrt(StrToFloat(EditNum.Caption)));
+  except
+
+  end;
 end;
 
 procedure TFormCalculator.SquareButtonClick(Sender: TObject);
 begin
+  try
   EditNum.Caption:= FloatToStr(Sqr(StrToFloat(EditNum.Caption)));
+  except
+
+  end;
 end;
 
 procedure TFormCalculator.FourButtonClick(Sender: TObject);
@@ -256,7 +278,11 @@ end;
 
 procedure TFormCalculator.InverseButtonClick(Sender: TObject);
 begin
+  try
   EditNum.Caption:= FloatToStr(1 / StrToFloat(EditNum.Caption));
+  except
+
+  end;
 end;
 
 procedure TFormCalculator.MinusButtonClick(Sender: TObject);
@@ -269,12 +295,20 @@ begin
      begin
 
      end
-  else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] <> '-') then
+  else if (ResultMemo.Lines[0] <> '')and (EditNum.Caption = '') and (ResultMemo.Lines[1] <> '-') then
      begin
-
+        ResultMemo.Lines[1] := '-';
      end
   else if (ResultMemo.Lines[0] = '') and (EditNum.Caption <> '') then
     begin
+      ResultMemo.Lines.Clear;
+      ResultMemo.Lines.Add(EditNum.Caption);
+      ResultMemo.Lines.Add('-');
+      EditNum.Caption:= '';
+    end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
+    begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('-');
@@ -284,6 +318,10 @@ begin
      begin
       ResultMemo.Lines[1] := '-';
      end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '-') then
+    begin
+      ResultMemo.Lines[1] := '-';
+    end
   else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] = '-') and (EditNum.Caption <> '') and (Flag = False) then
      begin
       Flag := True;
@@ -312,12 +350,20 @@ begin
      begin
 
      end
-  else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] <> '×') then
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption = '') and (ResultMemo.Lines[1] <> '×') then
      begin
-
+      ResultMemo.Lines[1] := '×';
      end
   else if (ResultMemo.Lines[0] = '') and (EditNum.Caption <> '') then
     begin
+      ResultMemo.Lines.Clear;
+      ResultMemo.Lines.Add(EditNum.Caption);
+      ResultMemo.Lines.Add('×');
+      EditNum.Caption:= '';
+    end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
+    begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('×');
@@ -327,6 +373,10 @@ begin
      begin
       ResultMemo.Lines[1] := '×';
      end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '×') then
+    begin
+      ResultMemo.Lines[1] := '×';
+    end
   else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] = '×') and (EditNum.Caption <> '') and (Flag = False) then
      begin
       Flag := True;
@@ -414,9 +464,9 @@ begin
      begin
 
      end
-  else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] <> '÷') then
+  else if (ResultMemo.Lines[0] <> '')and (EditNum.Caption = '') and (ResultMemo.Lines[1] <> '÷') then
      begin
-
+       ResultMemo.Lines[1] := '÷';
      end
   else if (ResultMemo.Lines[0] = '') and (EditNum.Caption <> '') then
     begin
@@ -425,11 +475,23 @@ begin
       ResultMemo.Lines.Add('÷');
       EditNum.Caption:= '';
     end
-  else if (ResultMemo.Lines[1] <> '') and (EditNum.Caption = '') then
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
+    begin
+      Flag:= False;
+      ResultMemo.Lines.Clear;
+      ResultMemo.Lines.Add(EditNum.Caption);
+      ResultMemo.Lines.Add('÷');
+      EditNum.Caption:= '';
+    end
+  else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '÷') then
+    begin
+      ResultMemo.Lines[1] := '÷';
+    end
+  else if (ResultMemo.Lines[1] <> '÷') then
      begin
       ResultMemo.Lines[1] := '÷';
      end
-  else if (ResultMemo.Lines[0] <> '') and (ResultMemo.Lines[1] = '÷') and (EditNum.Caption <> '') and (Flag = False) and (EditNum.Caption <> '0') then
+  else if (ResultMemo.Lines[0] <> '')  and (ResultMemo.Lines[1] = '÷') and (EditNum.Caption <> '') and (Flag = False) and (EditNum.Caption <> '0') then
      begin
       Flag := True;
       ResultMemo.Lines.Add(EditNum.Caption);

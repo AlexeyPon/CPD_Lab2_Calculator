@@ -84,7 +84,7 @@ object FormCalculator: TFormCalculator
     object MinusButton: TButton
       Left = 270
       Height = 25
-      Top = 121
+      Top = 120
       Width = 75
       Anchors = [akRight]
       Caption = '-'
@@ -188,12 +188,13 @@ object FormCalculator: TFormCalculator
       Width = 75
       Anchors = [akRight]
       Caption = '2'
+      OnClick = TwoButtonClick
       TabOrder = 13
     end
     object FiveButton: TButton
       Left = 94
       Height = 25
-      Top = 121
+      Top = 120
       Width = 75
       Anchors = [akRight]
       Caption = '5'
