@@ -10,17 +10,17 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, Calculator, ScientificForm
-  { you can add units after this };
+  Forms, Calculator, Unit1, SysUtils;
 
 {$R *.res}
 
 begin
+  SysUtils.FormatSettings.DecimalSeparator :=  DefaultFormatSettings;
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TFormCalculator, FormCalculator);
-  Application.CreateForm(TSciCalc, SciCalc);
+  Application.CreateForm(TAboutForm, AboutForm);
   Application.Run;
 end.
 

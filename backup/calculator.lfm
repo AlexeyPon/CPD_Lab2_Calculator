@@ -1,290 +1,491 @@
 object FormCalculator: TFormCalculator
-  Left = 561
-  Height = 414
-  Top = 98
-  Width = 380
+  Left = 320
+  Height = 505
+  Top = 129
+  Width = 615
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
   Caption = 'SimpleCalculator'
-  ClientHeight = 414
-  ClientWidth = 380
+  ClientHeight = 505
+  ClientWidth = 615
+  OnClick = FormClick
   OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  PopupMenu = MainPopupMenu
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.5.0'
   object ResultMemo: TMemo
-    Left = 12
-    Height = 89
+    AnchorSideLeft.Side = asrBottom
+    Left = 269
+    Height = 151
     Hint = 'Result'
     Top = 8
-    Width = 358
-    Anchors = [akTop, akRight]
+    Width = 336
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
     Lines.Strings = (
       'ResultMemo'
     )
     OnChange = ResultMemoChange
     ParentBidiMode = False
     ReadOnly = True
-    TabOrder = 0
-  end
-  object EditNum: TEdit
-    AnchorSideTop.Control = ResultMemo
-    AnchorSideTop.Side = asrBottom
-    Left = 12
-    Height = 23
-    Top = 112
-    Width = 358
-    Anchors = [akTop, akRight]
-    BorderSpacing.Top = 15
-    NumbersOnly = True
-    ParentBidiMode = False
     TabOrder = 1
   end
-  object StandardBox: TGroupBox
-    AnchorSideTop.Control = EditNum
+  object EditNum: TEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ResultMemo
     AnchorSideTop.Side = asrBottom
-    Left = 12
-    Height = 256
-    Top = 150
-    Width = 358
-    Anchors = [akTop, akRight]
-    BorderSpacing.Top = 15
-    ClientHeight = 236
-    ClientWidth = 354
+    AnchorSideBottom.Control = StandardBox
+    Left = 269
+    Height = 29
+    Top = 169
+    Width = 336
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 10
+    BorderSpacing.Bottom = 10
+    ParentBidiMode = False
+    OnChange = EditNumChange
+    OnKeyPress = EditNumKeyPress
     TabOrder = 2
-    object DeleteButton: TButton
-      Left = 270
-      Height = 25
-      Top = 0
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Delete'
-      OnClick = DeleteButtonClick
-      TabOrder = 0
-    end
-    object DivideButton: TButton
-      Left = 270
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = '÷'
-      OnClick = DivideButtonClick
-      TabOrder = 1
-    end
-    object MultiplyButton: TButton
-      Left = 270
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '×'
-      OnClick = MultiplyButtonClick
-      TabOrder = 2
-    end
-    object MinusButton: TButton
-      Left = 270
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '-'
-      OnClick = MinusButtonClick
-      TabOrder = 3
-    end
-    object PlusButton: TButton
-      Left = 270
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '+'
-      OnClick = PlusButtonClick
-      TabOrder = 4
-    end
-    object ResultButton: TButton
-      Left = 270
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '='
-      OnClick = ResultButtonClick
-      TabOrder = 5
-    end
-    object CommaButton: TButton
-      Left = 182
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = ','
-      OnClick = CommaButtonClick
-      TabOrder = 6
-    end
-    object ThreeButton: TButton
-      Left = 182
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '3'
-      OnClick = ThreeButtonClick
-      TabOrder = 7
-    end
-    object SixButton: TButton
-      Left = 182
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '6'
-      OnClick = SixButtonClick
-      TabOrder = 8
-    end
-    object NineButton: TButton
-      Left = 182
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '9'
-      OnClick = NineButtonClick
-      TabOrder = 9
-    end
-    object SqrtButton: TButton
-      Left = 182
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Sqrt'
-      OnClick = SqrtButtonClick
-      TabOrder = 10
-    end
-    object ClearButton: TButton
-      Left = 182
-      Height = 25
-      Top = 0
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Clear'
-      OnClick = ClearButtonClick
-      TabOrder = 11
-    end
-    object ZeroButton: TButton
-      Left = 94
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '0'
-      OnClick = ZeroButtonClick
-      TabOrder = 12
-    end
-    object TwoButton: TButton
-      Left = 94
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '2'
-      OnClick = TwoButtonClick
-      TabOrder = 13
-    end
-    object FiveButton: TButton
-      Left = 94
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '5'
-      OnClick = FiveButtonClick
-      TabOrder = 14
-    end
-    object EightButton: TButton
-      Left = 94
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '8'
-      OnClick = EightButtonClick
-      TabOrder = 15
-    end
-    object SquareButton: TButton
-      Left = 94
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Sq'
-      OnClick = SquareButtonClick
-      TabOrder = 16
-    end
-    object ChangeSignButton: TButton
-      Left = 8
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '+/-'
-      OnClick = ChangeSignButtonClick
-      TabOrder = 17
-    end
-    object ClearAllButton: TButton
-      Left = 94
-      Height = 25
-      Top = 0
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'CE'
-      OnClick = ClearAllButtonClick
-      TabOrder = 18
-    end
-    object OneButton: TButton
-      Left = 8
-      Height = 25
-      Top = 160
-      Width = 75
-      Caption = '1'
-      OnClick = OneButtonClick
-      TabOrder = 19
-    end
-    object FourButton: TButton
-      Left = 8
-      Height = 25
-      Top = 120
-      Width = 75
-      Caption = '4'
-      OnClick = FourButtonClick
-      TabOrder = 20
-    end
-    object SevenButton: TButton
-      Left = 8
-      Height = 25
-      Top = 80
-      Width = 75
-      Caption = '7'
-      OnClick = SevenButtonClick
-      TabOrder = 21
-    end
-    object InverseButton: TButton
-      Left = 8
-      Height = 25
-      Top = 40
-      Width = 75
-      Caption = '1/x'
-      OnClick = InverseButtonClick
-      TabOrder = 22
-    end
+  end
+  object StandardBox: TGroupBox
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    Left = 269
+    Height = 237
+    Top = 208
+    Width = 336
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 217
+    ClientWidth = 332
+    TabOrder = 4
+    OnClick = StandardBoxClick
     object PercentButton: TButton
-      Left = 8
+      Left = 0
       Height = 25
       Top = 0
       Width = 75
       Caption = '%'
       OnClick = PercentButtonClick
+      TabOrder = 0
+    end
+    object ClearAllButton: TButton
+      Left = 83
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'CE'
+      OnClick = ClearAllButtonClick
+      TabOrder = 1
+    end
+    object ClearButton: TButton
+      Left = 171
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Clear'
+      OnClick = ClearButtonClick
+      TabOrder = 2
+    end
+    object DeleteButton: TButton
+      Left = 256
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Delete'
+      OnClick = DeleteButtonClick
+      TabOrder = 3
+    end
+    object InverseButton: TButton
+      Left = 0
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = '1/x'
+      OnClick = InverseButtonClick
+      TabOrder = 4
+    end
+    object SquareButton: TButton
+      Left = 83
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'Sq'
+      OnClick = SquareButtonClick
+      TabOrder = 5
+    end
+    object SqrtButton: TButton
+      Left = 171
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'Sqrt'
+      OnClick = SqrtButtonClick
+      TabOrder = 6
+    end
+    object DivideButton: TButton
+      Left = 256
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = '÷'
+      OnClick = DivideButtonClick
+      TabOrder = 7
+    end
+    object SevenButton: TButton
+      Left = 0
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '7'
+      OnClick = SevenButtonClick
+      TabOrder = 8
+    end
+    object EightButton: TButton
+      Left = 83
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '8'
+      OnClick = EightButtonClick
+      TabOrder = 9
+    end
+    object NineButton: TButton
+      Left = 171
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '9'
+      OnClick = NineButtonClick
+      TabOrder = 10
+    end
+    object PlusButton: TButton
+      Left = 256
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '+'
+      OnClick = PlusButtonClick
+      TabOrder = 19
+    end
+    object FourButton: TButton
+      Left = 0
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '4'
+      OnClick = FourButtonClick
+      TabOrder = 12
+    end
+    object FiveButton: TButton
+      Left = 83
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '5'
+      OnClick = FiveButtonClick
+      TabOrder = 13
+    end
+    object SixButton: TButton
+      Left = 171
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '6'
+      OnClick = SixButtonClick
+      TabOrder = 14
+    end
+    object MultiplyButton: TButton
+      Left = 256
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '×'
+      OnClick = MultiplyButtonClick
+      TabOrder = 11
+    end
+    object OneButton: TButton
+      Left = 0
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '1'
+      OnClick = OneButtonClick
+      TabOrder = 16
+    end
+    object TwoButton: TButton
+      Left = 83
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '2'
+      OnClick = TwoButtonClick
+      TabOrder = 17
+    end
+    object ThreeButton: TButton
+      Left = 171
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '3'
+      OnClick = ThreeButtonClick
+      TabOrder = 18
+    end
+    object MinusButton: TButton
+      Left = 256
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '-'
+      OnClick = MinusButtonClick
+      TabOrder = 15
+    end
+    object ChangeSignButton: TButton
+      Left = 0
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '+/-'
+      OnClick = ChangeSignButtonClick
+      TabOrder = 20
+    end
+    object ZeroButton: TButton
+      Left = 83
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '0'
+      OnClick = ZeroButtonClick
+      TabOrder = 21
+    end
+    object CommaButton: TButton
+      Left = 171
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '.'
+      OnClick = CommaButtonClick
+      TabOrder = 22
+    end
+    object ResultButton: TButton
+      Left = 256
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '='
+      OnClick = ResultButtonClick
       TabOrder = 23
+    end
+  end
+  object TrigBox: TGroupBox
+    AnchorSideTop.Side = asrBottom
+    Left = 48
+    Height = 280
+    Top = 104
+    Width = 167
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 10
+    ClientHeight = 260
+    ClientWidth = 163
+    TabOrder = 3
+    Visible = False
+    OnClick = TrigBoxClick
+    object SinButton: TButton
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Sin'
+      OnClick = SinButtonClick
+      TabOrder = 0
+    end
+    object CosButton: TButton
+      Left = 0
+      Height = 25
+      Top = 38
+      Width = 75
+      Caption = 'Cos'
+      OnClick = CosButtonClick
+      TabOrder = 1
+    end
+    object TanButton: TButton
+      Left = 0
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = 'Tan'
+      OnClick = TanButtonClick
+      TabOrder = 2
+    end
+    object SecButton: TButton
+      Left = 0
+      Height = 25
+      Top = 116
+      Width = 75
+      Caption = 'Sec'
+      OnClick = SecButtonClick
+      TabOrder = 3
+    end
+    object CscButton: TButton
+      Left = 0
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = 'Csc'
+      OnClick = CscButtonClick
+      TabOrder = 4
+    end
+    object CotButton: TButton
+      Left = 0
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = 'Cot'
+      OnClick = CotButtonClick
+      TabOrder = 5
+    end
+    object PowerButton: TButton
+      Left = 88
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'x^y'
+      OnClick = PowerButtonClick
+      TabOrder = 6
+    end
+    object LogButton: TButton
+      Left = 88
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'log'
+      OnClick = LogButtonClick
+      TabOrder = 7
+    end
+    object LnButton: TButton
+      Left = 88
+      Height = 26
+      Top = 77
+      Width = 75
+      Caption = 'ln'
+      OnClick = LnButtonClick
+      TabOrder = 8
+    end
+    object FactButton: TButton
+      Left = 88
+      Height = 25
+      Top = 116
+      Width = 75
+      Caption = 'Fact'
+      OnClick = FactButtonClick
+      TabOrder = 9
+    end
+    object ModButton: TButton
+      Left = 88
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = 'Mod'
+      OnClick = ModButtonClick
+      TabOrder = 10
+    end
+    object BaseButton: TButton
+      Left = 88
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = 'Base'
+      OnClick = BaseButtonClick
+      PopupMenu = BasePopupMenu
+      TabOrder = 11
+    end
+  end
+  object MenuButton: TButton
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ResultMemo
+    Left = 201
+    Height = 50
+    Top = 8
+    Width = 63
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Caption = 'Menu'
+    OnClick = MenuButtonClick
+    PopupMenu = MainPopupMenu
+    TabOrder = 0
+  end
+  object MainPopupMenu: TPopupMenu
+    Left = 408
+    Top = 464
+    object ModeButton: TMenuItem
+      Caption = 'Mode'
+      OnClick = ModeButtonClick
+      object MenuItem3: TMenuItem
+        Caption = 'Standard'
+        OnClick = MenuItem3Click
+      end
+      object ScientificModeButton: TMenuItem
+        Caption = 'Scientific'
+        OnClick = ScientificModeButtonClick
+      end
+    end
+    object LanguageButton: TMenuItem
+      Caption = 'Language'
+      object EnglishButton: TMenuItem
+        Caption = 'English'
+      end
+      object RussianButton: TMenuItem
+        Caption = 'Russian'
+      end
+    end
+    object LayoutButton: TMenuItem
+      Caption = 'Layout'
+      OnClick = LayoutButtonClick
+      object LightTeme: TMenuItem
+        Caption = 'Light'
+        OnClick = LightTemeClick
+      end
+      object DarkThemeButton: TMenuItem
+        Caption = 'Dark'
+        OnClick = DarkThemeButtonClick
+      end
+      object SimpleThemeButton: TMenuItem
+        Caption = 'Simple'
+      end
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object AboutButton: TMenuItem
+      Caption = 'About'
+      OnClick = AboutButtonClick
+    end
+  end
+  object BasePopupMenu: TPopupMenu
+    Left = 272
+    Top = 456
+    object Base2: TMenuItem
+      Caption = '2'
+    end
+    object Base3: TMenuItem
+      Caption = '3'
+    end
+    object Base4: TMenuItem
+      Caption = '4'
+    end
+    object Base5: TMenuItem
+      Caption = '5'
+    end
+    object Base6: TMenuItem
+      Caption = '6'
+    end
+    object Base7: TMenuItem
+      Caption = '7'
+    end
+    object Base8: TMenuItem
+      Caption = '8'
     end
   end
 end
