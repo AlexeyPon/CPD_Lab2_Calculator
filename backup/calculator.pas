@@ -256,6 +256,7 @@ begin
     end
   else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
     begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('+');
@@ -462,6 +463,7 @@ begin
     end
   else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
     begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('-');
@@ -516,6 +518,7 @@ begin
     end
   else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
     begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('×');
@@ -1112,6 +1115,7 @@ begin
     end
   else if (ResultMemo.Lines[0] <> '') and (EditNum.Caption <> '') and (ResultMemo.Lines[1] <> '') and (ResultMemo.Lines[2] <> '') and (ResultMemo.Lines[3] <> '')then
     begin
+      Flag:= False;
       ResultMemo.Lines.Clear;
       ResultMemo.Lines.Add(EditNum.Caption);
       ResultMemo.Lines.Add('÷');

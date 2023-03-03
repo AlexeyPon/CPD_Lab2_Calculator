@@ -45,10 +45,7 @@ object FormCalculator: TFormCalculator
     Top = 32
     Width = 336
     Anchors = []
-    BorderSpacing.Left = 10
-    BorderSpacing.Top = 5
-    BorderSpacing.Right = 10
-    BorderSpacing.Bottom = 5
+    BorderSpacing.Around = 5
 >>>>>>> Stashed changes
     Lines.Strings = (
       'ResultMemo'
@@ -80,6 +77,7 @@ object FormCalculator: TFormCalculator
     Width = 333
     Anchors = []
     AutoSize = False
+    BorderSpacing.Around = 5
     ParentBidiMode = False
     OnChange = EditNumChange
     OnKeyPress = EditNumKeyPress

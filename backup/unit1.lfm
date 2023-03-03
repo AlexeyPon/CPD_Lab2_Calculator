@@ -1,23 +1,23 @@
 object AboutForm: TAboutForm
   Left = 545
-  Height = 236
+  Height = 155
   Top = 209
-  Width = 320
+  Width = 310
   Caption = 'About'
-  ClientHeight = 236
-  ClientWidth = 320
+  ClientHeight = 155
+  ClientWidth = 310
   OnCreate = FormCreate
   LCLVersion = '2.2.5.0'
   object Panel1: TPanel
     Left = 4
-    Height = 224
+    Height = 143
     Top = 8
-    Width = 308
+    Width = 298
     Anchors = [akTop, akLeft, akRight, akBottom]
     AutoSize = True
     BorderSpacing.Around = 5
-    ClientHeight = 224
-    ClientWidth = 308
+    ClientHeight = 143
+    ClientWidth = 298
     TabOrder = 0
     OnClick = Panel1Click
     object AboutText: TLabel

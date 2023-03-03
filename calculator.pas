@@ -6,20 +6,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
-<<<<<<< Updated upstream
-  ExtCtrls, ActnList;
-=======
   ExtCtrls, ActnList, Unit1, math, DefaultTranslator, LCLType, baseConvert,
   Clipbrd, ComCtrls, System.Uitypes, LCLTranslator;
->>>>>>> Stashed changes
 
 type
 
   { TFormCalculator }
 
   TFormCalculator = class(TForm)
-<<<<<<< Updated upstream
-=======
     BaseButton: TButton;
     Base2: TMenuItem;
     Base3: TMenuItem;
@@ -59,7 +53,6 @@ type
     LightThemeButton: TMenuItem;
     MainPopupMenu: TPopupMenu;
     Separator1: TMenuItem;
->>>>>>> Stashed changes
     ZeroButton: TButton;
     SevenButton: TButton;
     InverseButton: TButton;
@@ -87,8 +80,6 @@ type
     EditNum: TEdit;
     StandardBox: TGroupBox;
     ResultMemo: TMemo;
-<<<<<<< Updated upstream
-=======
     procedure Base2Click(Sender: TObject);
     procedure Base3Click(Sender: TObject);
     procedure Base4Click(Sender: TObject);
@@ -128,7 +119,6 @@ type
     procedure TanButtonClick(Sender: TObject);
     procedure FormClick(Sender: TObject);
     procedure MainMenuClick(Sender: TObject);
->>>>>>> Stashed changes
     procedure ChangeSignButtonClick(Sender: TObject);
     procedure ClearAllButtonClick(Sender: TObject);
     procedure ClearButtonClick(Sender: TObject);
@@ -139,13 +129,10 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FourButtonClick(Sender: TObject);
     procedure InverseButtonClick(Sender: TObject);
-<<<<<<< Updated upstream
-=======
     procedure MenuButtonClick(Sender: TObject);
     procedure AboutButtonClick(Sender: TObject);
     procedure ModeButtonClick(Sender: TObject);
     procedure ThemeButtonClick(Sender: TObject);
->>>>>>> Stashed changes
     procedure MinusButtonClick(Sender: TObject);
     procedure MultiplyButtonClick(Sender: TObject);
     procedure NineButtonClick(Sender: TObject);
@@ -153,18 +140,16 @@ type
     procedure PercentButtonClick(Sender: TObject);
     procedure PlusButtonClick(Sender: TObject);
     procedure ResultButtonClick(Sender: TObject);
+    procedure ScientificModeButtonClick(Sender: TObject);
     procedure SevenButtonClick(Sender: TObject);
     procedure SixButtonClick(Sender: TObject);
     procedure SqrtButtonClick(Sender: TObject);
     procedure SquareButtonClick(Sender: TObject);
     procedure ThreeButtonClick(Sender: TObject);
-<<<<<<< Updated upstream
-=======
     procedure ToolBarClick(Sender: TObject);
     procedure ToolBarResize(Sender: TObject);
     procedure TrigBoxClick(Sender: TObject);
     procedure TrigBoxResize(Sender: TObject);
->>>>>>> Stashed changes
     procedure TwoButtonClick(Sender: TObject);
     procedure ZeroButtonClick(Sender: TObject);
     procedure CommaButtonClick(Sender: TObject);
@@ -188,6 +173,16 @@ implementation
 resourcestring
   SmtWrong = 'Something went wrong';
   DivZero = 'Cannot divide by zero';
+  InvalidInput = 'Invalid input';
+
+function factorial(num: Integer): Integer;
+var
+  i: Integer;
+begin
+   Result := num;
+   for i := num-1 downto 1 do
+     Result := Result * i;
+end;
 
 procedure TFormCalculator.ResultMemoChange(Sender: TObject);
 begin
@@ -197,10 +192,6 @@ end;
 procedure TFormCalculator.CommaButtonClick(Sender: TObject);
 begin
   if EditNum.Caption = '' then
-<<<<<<< Updated upstream
-       EditNum.Caption:= '0,'
-  else EditNum.Caption:= EditNum.Caption + ',';
-=======
        EditNum.Caption:= '0'+ DefaultFormatSettings.DecimalSeparator
   else if pos(DefaultFormatSettings.DecimalSeparator,EditNum.Caption) = 0 then
        begin
@@ -210,7 +201,6 @@ begin
   begin
 
   end;
->>>>>>> Stashed changes
 end;
 
 procedure TFormCalculator.ZeroButtonClick(Sender: TObject);
@@ -289,6 +279,7 @@ begin
   try
   if (ResultMemo.Lines[0] <> '')and (ResultMemo.Lines[1] <> '') and (EditNum.Caption <> '') then
       if (ResultMemo.Lines[2] = '') then
+        //procedure if there is no = in the memo
         begin
               if pos('base', ResultMemo.Text) <> 0 then begin
 
@@ -326,8 +317,33 @@ begin
                      ResultMemo.Lines[3] := '=';
                      EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) / StrToFloat(EditNum.Caption)));
                 end
+              else if  ResultMemo.Lines[1] = '^' then
+                begin
+                     Flag := True;
+                     ResultMemo.Lines[2] := EditNum.Caption;
+                     ResultMemo.Lines[3] := '=';
+                     EditNum.Caption:= FloatToStr(Power(StrToFloat(ResultMemo.Lines[0]),StrToFloat(EditNum.Caption)));
+                end
+              else if  ResultMemo.Lines[1] = 'mod' then
+                begin
+                     if EditNum.Caption <> '0' then
+                     begin
+                       Flag := True;
+                       ResultMemo.Lines[2] := EditNum.Caption;
+                       ResultMemo.Lines[3] := '=';
+                       EditNum.Caption:= FloatToStr(StrToFloat(ResultMemo.Lines[0]) mod StrToFloat(EditNum.Caption));
+                     end
+                     else
+                     begin
+                       Flag := True;
+                       ResultMemo.Lines[2] := '0';
+                       ResultMemo.Lines[3] := '=';
+                       EditNum.Caption:= '0';
+                     end
+                end
         end
       else if (ResultMemo.Lines[3] <> '') then
+        //if there is a = in the memo
           begin
                 if ResultMemo.Lines[1] = '+' then
                   begin
@@ -354,6 +370,23 @@ begin
                        ResultMemo.Lines[0] := EditNum.Caption;
                        EditNum.Caption := FloatToStr((StrToFloat(ResultMemo.Lines[0]) / StrToFloat(ResultMemo.Lines[2])));
                   end
+                else if  ResultMemo.Lines[1] = '^' then
+                  begin
+                       ResultMemo.Lines[0] := EditNum.Caption;
+                       EditNum.Caption:= FloatToStr(Power(StrToFloat(ResultMemo.Lines[0]),StrToFloat(EditNum.Caption)));
+                  end
+                else if  ResultMemo.Lines[1] = 'mod' then
+                  begin
+                       if EditNum.Caption <> '0' then
+                         begin
+                           ResultMemo.Lines[0] := EditNum.Caption;
+                           EditNum.Caption:= FloatToStr(StrToFloat(ResultMemo.Lines[0]) mod StrToFloat(EditNum.Caption));
+                         end
+                       else
+                       begin
+
+                       end
+                  end
            end
   except
     ShowMessage(SmtWrong);
@@ -361,8 +394,6 @@ begin
   end;
 end;
 
-<<<<<<< Updated upstream
-=======
 procedure TFormCalculator.ScientificModeButtonClick(Sender: TObject);
 begin
   TrigBox.Enabled:= True;
@@ -374,7 +405,6 @@ begin
   TrigBox.Align:= alClient;;
 end;
 
->>>>>>> Stashed changes
 procedure TFormCalculator.SevenButtonClick(Sender: TObject);
 begin
   EditNum.Caption:= EditNum.Caption + '7';
@@ -417,8 +447,6 @@ begin
   end;
 end;
 
-<<<<<<< Updated upstream
-=======
 procedure TFormCalculator.MenuButtonClick(Sender: TObject);
 begin
   MainPopupMenu.PopUp;
@@ -439,7 +467,6 @@ begin
 
 end;
 
->>>>>>> Stashed changes
 procedure TFormCalculator.MinusButtonClick(Sender: TObject);
 begin
   if (ResultMemo.Lines[1] = '-') and (EditNum.Caption = '') then
@@ -562,8 +589,6 @@ end;
 
 procedure TFormCalculator.FormCreate(Sender: TObject);
 begin
-<<<<<<< Updated upstream
-=======
 
   ResultMemo.Align:= alTop;
   EditNum.Align:= alTop;
@@ -579,14 +604,11 @@ begin
 
   CommaButton.Caption:= DefaultFormatSettings.DecimalSeparator;
 
->>>>>>> Stashed changes
   ResultMemo.Lines.Clear;
 
   SetDefaultLang('en');
 
   Flag := False;
-<<<<<<< Updated upstream
-=======
   TrigBox.ChildSizing.Layout:= cclLeftToRightThenTopToBottom;
   TrigBox.ChildSizing.ControlsPerLine:= 4;
   TrigBox.ChildSizing.VerticalSpacing:= 2;
@@ -604,7 +626,6 @@ begin
   StandardBox.ChildSizing.TopBottomSpacing:= 2;
   StandardBox.ChildSizing.EnlargeHorizontal:= crsHomogenousChildResize;
   StandardBox.ChildSizing.EnlargeVertical:= crsHomogenousChildResize;
->>>>>>> Stashed changes
 end;
 
 procedure TFormCalculator.EightButtonClick(Sender: TObject);
@@ -621,8 +642,6 @@ begin
   end;
 end;
 
-<<<<<<< Updated upstream
-=======
 procedure TFormCalculator.MainMenuClick(Sender: TObject);
 begin
 
@@ -1062,7 +1081,6 @@ begin
   EditNum.Color:=  TColor($F0CAA6);
 end;
 
->>>>>>> Stashed changes
 procedure TFormCalculator.ClearAllButtonClick(Sender: TObject);
 begin
   EditNum.Caption:= '';
@@ -1157,8 +1175,6 @@ begin
   EditNum.Caption:= EditNum.Caption + '3';
 end;
 
-<<<<<<< Updated upstream
-=======
 procedure TFormCalculator.ToolBarClick(Sender: TObject);
 begin
 
@@ -1179,7 +1195,6 @@ begin
   TrigBox.Height:= Round((FormCalculator.ClientHeight  - ToolBar.Height)/ 4);
 end;
 
->>>>>>> Stashed changes
 procedure TFormCalculator.TwoButtonClick(Sender: TObject);
 begin
   EditNum.Caption:= EditNum.Caption + '2';
