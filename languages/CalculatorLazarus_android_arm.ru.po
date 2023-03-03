@@ -1,0 +1,310 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: calculator.divzero
+msgid "Cannot divide by zero"
+msgstr "Невозможно разделить на ноль"
+
+#: calculator.invalidinput
+msgid "Invalid input"
+msgstr "Некорректный ввод"
+
+#: calculator.smtwrong
+msgid "Something went wrong"
+msgstr "Что-то пошло не так"
+
+#: taboutform.caption
+msgctxt "taboutform.caption"
+msgid "About"
+msgstr "Справка"
+
+#: tformcalculator.aboutbutton.caption
+msgctxt "tformcalculator.aboutbutton.caption"
+msgid "About"
+msgstr "Справка"
+
+#: tformcalculator.base2.caption
+msgctxt "tformcalculator.base2.caption"
+msgid "2"
+msgstr "2"
+
+#: tformcalculator.base3.caption
+msgctxt "tformcalculator.base3.caption"
+msgid "3"
+msgstr "3"
+
+#: tformcalculator.base4.caption
+msgctxt "tformcalculator.base4.caption"
+msgid "4"
+msgstr "4"
+
+#: tformcalculator.base5.caption
+msgctxt "tformcalculator.base5.caption"
+msgid "5"
+msgstr "5"
+
+#: tformcalculator.base6.caption
+msgctxt "tformcalculator.base6.caption"
+msgid "6"
+msgstr "6"
+
+#: tformcalculator.base7.caption
+msgctxt "tformcalculator.base7.caption"
+msgid "7"
+msgstr "7"
+
+#: tformcalculator.base8.caption
+msgctxt "tformcalculator.base8.caption"
+msgid "8"
+msgstr "8"
+
+#: tformcalculator.basebutton.caption
+msgid "Base"
+msgstr "Основание"
+
+#: tformcalculator.caption
+msgid "SimpleCalculator"
+msgstr "Простой калькулятор"
+
+#: tformcalculator.changesignbutton.caption
+msgid "+/-"
+msgstr "+/-"
+
+#: tformcalculator.clearallbutton.caption
+msgid "CE"
+msgstr "CE"
+
+#: tformcalculator.clearbutton.caption
+msgctxt "tformcalculator.clearbutton.caption"
+msgid "Clear"
+msgstr "Очистить"
+
+#: tformcalculator.commabutton.caption
+msgid "."
+msgstr "."
+
+#: tformcalculator.copybutton.caption
+msgid "Copy"
+msgstr "Копировать"
+
+#: tformcalculator.copyvaluebutton.caption
+msgid "Copy Val"
+msgstr "Коп. знач."
+
+#: tformcalculator.cosbutton.caption
+msgid "Cos"
+msgstr "Cos"
+
+#: tformcalculator.cotbutton.caption
+msgid "Cot"
+msgstr "Cot"
+
+#: tformcalculator.cscbutton.caption
+msgid "Csc"
+msgstr "Csc"
+
+#: tformcalculator.darkthemebutton.caption
+msgid "Dark"
+msgstr "Темная"
+
+#: tformcalculator.deletebutton.caption
+msgid "Delete"
+msgstr "Удалить"
+
+#: tformcalculator.dividebutton.caption
+msgctxt "tformcalculator.dividebutton.caption"
+msgid "÷"
+msgstr "÷"
+
+#: tformcalculator.eightbutton.caption
+msgctxt "tformcalculator.eightbutton.caption"
+msgid "8"
+msgstr "8"
+
+#: tformcalculator.englishbutton.caption
+msgctxt "tformcalculator.englishbutton.caption"
+msgid "English"
+msgstr "Английский"
+
+#: tformcalculator.factbutton.caption
+msgid "Fact"
+msgstr "Fact"
+
+#: tformcalculator.fivebutton.caption
+msgctxt "tformcalculator.fivebutton.caption"
+msgid "5"
+msgstr "5"
+
+#: tformcalculator.fourbutton.caption
+msgctxt "tformcalculator.fourbutton.caption"
+msgid "4"
+msgstr "4"
+
+#: tformcalculator.inversebutton.caption
+msgid "1/x"
+msgstr "1/x"
+
+#: tformcalculator.languagebutton.caption
+msgctxt "tformcalculator.languagebutton.caption"
+msgid "Language"
+msgstr "Язык"
+
+#: tformcalculator.lightthemebutton.caption
+msgctxt "tformcalculator.lightthemebutton.caption"
+msgid "Light"
+msgstr "Светлая"
+
+#: tformcalculator.lnbutton.caption
+msgid "ln"
+msgstr "ln"
+
+#: tformcalculator.logbutton.caption
+msgid "log"
+msgstr "log"
+
+#: tformcalculator.menubutton.caption
+msgid "Menu"
+msgstr "Меню"
+
+#: tformcalculator.minusbutton.caption
+msgctxt "tformcalculator.minusbutton.caption"
+msgid "-"
+msgstr "-"
+
+#: tformcalculator.modbutton.caption
+msgid "Mod"
+msgstr "Mod"
+
+#: tformcalculator.modebutton.caption
+msgctxt "tformcalculator.modebutton.caption"
+msgid "Mode"
+msgstr "Режим"
+
+#: tformcalculator.multiplybutton.caption
+msgctxt "tformcalculator.multiplybutton.caption"
+msgid "×"
+msgstr "×"
+
+#: tformcalculator.ninebutton.caption
+msgid "9"
+msgstr "9"
+
+#: tformcalculator.onebutton.caption
+msgid "1"
+msgstr "1"
+
+#: tformcalculator.pastebutton.caption
+msgid "Paste"
+msgstr "Вставить"
+
+#: tformcalculator.percentbutton.caption
+msgctxt "tformcalculator.percentbutton.caption"
+msgid "%"
+msgstr "%"
+
+#: tformcalculator.plusbutton.caption
+msgctxt "tformcalculator.plusbutton.caption"
+msgid "+"
+msgstr "+"
+
+#: tformcalculator.powerbutton.caption
+msgid "x^y"
+msgstr "x^y"
+
+#: tformcalculator.resultbutton.caption
+msgid "="
+msgstr "="
+
+#: tformcalculator.resultmemo.hint
+msgid "Result"
+msgstr "Результат"
+
+#: tformcalculator.russianbutton.caption
+msgctxt "tformcalculator.russianbutton.caption"
+msgid "Russian"
+msgstr "Русский"
+
+#: tformcalculator.scientificmodebutton.caption
+msgctxt "tformcalculator.scientificmodebutton.caption"
+msgid "Scientific"
+msgstr "Инжереный"
+
+#: tformcalculator.secbutton.caption
+msgid "Sec"
+msgstr "Sec"
+
+#: tformcalculator.sevenbutton.caption
+msgctxt "tformcalculator.sevenbutton.caption"
+msgid "7"
+msgstr "7"
+
+#: tformcalculator.simplethemebutton.caption
+msgid "Simple"
+msgstr "Простая"
+
+#: tformcalculator.sinbutton.caption
+msgid "Sin"
+msgstr "Sin"
+
+#: tformcalculator.sixbutton.caption
+msgctxt "tformcalculator.sixbutton.caption"
+msgid "6"
+msgstr "6"
+
+#: tformcalculator.sqrtbutton.caption
+msgid "Sqrt"
+msgstr "Корень кв."
+
+#: tformcalculator.squarebutton.caption
+msgid "Sq"
+msgstr "Квадрат"
+
+#: tformcalculator.standardmodebutton.caption
+msgctxt "tformcalculator.standardmodebutton.caption"
+msgid "Standard"
+msgstr "Обычный"
+
+#: tformcalculator.tanbutton.caption
+msgid "Tan"
+msgstr "Tan"
+
+#: tformcalculator.themebutton.caption
+msgid "Theme"
+msgstr "Тема"
+
+#: tformcalculator.threebutton.caption
+msgctxt "tformcalculator.threebutton.caption"
+msgid "3"
+msgstr "3"
+
+#: tformcalculator.twobutton.caption
+msgctxt "tformcalculator.twobutton.caption"
+msgid "2"
+msgstr "2"
+
+#: tformcalculator.zerobutton.caption
+msgid "0"
+msgstr "0"
+
+#: unit1.info
+msgctxt "unit1.info"
+msgid ""
+"Calculator v 1.0\n"
+"Made for cross-platform development course\n"
+"© Ponomarev Alexey 2023"
+msgstr ""
+"Калькулятор v 1.0\n"
+"Сделан для курса кросс-платформенной разработки\n"
+"© Пономарев Алексей 2023"
+

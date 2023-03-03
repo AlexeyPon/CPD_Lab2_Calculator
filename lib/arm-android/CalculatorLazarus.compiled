@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="G:\Lazarus\fpc\bin\x86_64-win64\fpc.exe" Date="1448771083"/>
+  <Params Value=" -Tandroid -Parm -MObjFPC -Scghi -O2 -l -vewnhibq -FiG:\GitHub\CPD_Lab2_Calculator\lib\arm-android -FuG:\Lazarus\lazarus\lcl\units\arm-android\customdrawn -FuG:\Lazarus\lazarus\lcl\units\arm-android -FuG:\Lazarus\lazarus\components\freetype\lib\arm-android -FuG:\Lazarus\lazarus\components\lazutils\lib\arm-android -FuG:\Lazarus\lazarus\packager\units\arm-android -FuG:\GitHub\CPD_Lab2_Calculator\ -FUG:\GitHub\CPD_Lab2_Calculator\lib\arm-android\ -FEG:\GitHub\CPD_Lab2_Calculator\ -oG:\GitHub\CPD_Lab2_Calculator\CalculatorLazarus_android_arm -dLCL -dLCLcustomdrawn CalculatorLazarus.lpr"/>
+</CONFIG>

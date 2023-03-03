@@ -1,24 +1,11 @@
 object FormCalculator: TFormCalculator
-<<<<<<< Updated upstream
-  Left = 561
-  Height = 414
-  Top = 98
-  Width = 380
-=======
   Left = 325
   Height = 507
   Top = 129
   Width = 612
   AutoSize = True
->>>>>>> Stashed changes
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
   Caption = 'SimpleCalculator'
-<<<<<<< Updated upstream
-  ClientHeight = 414
-  ClientWidth = 380
-  OnCreate = FormCreate
-=======
   ClientHeight = 507
   ClientWidth = 612
   Constraints.MinHeight = 360
@@ -26,18 +13,9 @@ object FormCalculator: TFormCalculator
   OnClick = FormClick
   OnCreate = FormCreate
   OnResize = FormResize
->>>>>>> Stashed changes
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.5.0'
   object ResultMemo: TMemo
-<<<<<<< Updated upstream
-    Left = 12
-    Height = 89
-    Hint = 'Result'
-    Top = 8
-    Width = 358
-    Anchors = [akTop, akRight]
-=======
     AnchorSideLeft.Side = asrBottom
     Left = 229
     Height = 114
@@ -45,11 +23,7 @@ object FormCalculator: TFormCalculator
     Top = 32
     Width = 336
     Anchors = []
-    BorderSpacing.Left = 10
-    BorderSpacing.Top = 5
-    BorderSpacing.Right = 10
-    BorderSpacing.Bottom = 5
->>>>>>> Stashed changes
+    BorderSpacing.Around = 5
     Lines.Strings = (
       'ResultMemo'
     )
@@ -60,18 +34,6 @@ object FormCalculator: TFormCalculator
     TabOrder = 0
   end
   object EditNum: TEdit
-<<<<<<< Updated upstream
-    AnchorSideTop.Control = ResultMemo
-    AnchorSideTop.Side = asrBottom
-    Left = 12
-    Height = 23
-    Top = 112
-    Width = 358
-    Anchors = [akTop, akRight]
-    BorderSpacing.Top = 15
-    NumbersOnly = True
-    ParentBidiMode = False
-=======
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrBottom
     Left = 229
@@ -80,27 +42,16 @@ object FormCalculator: TFormCalculator
     Width = 333
     Anchors = []
     AutoSize = False
+    BorderSpacing.Around = 5
     ParentBidiMode = False
     OnChange = EditNumChange
     OnKeyPress = EditNumKeyPress
     OnResize = EditNumResize
->>>>>>> Stashed changes
     TabOrder = 1
   end
   object StandardBox: TGroupBox
-    AnchorSideTop.Control = EditNum
+    AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrBottom
-<<<<<<< Updated upstream
-    Left = 12
-    Height = 256
-    Top = 150
-    Width = 358
-    Anchors = [akTop, akRight]
-    BorderSpacing.Top = 15
-    ClientHeight = 236
-    ClientWidth = 354
-    TabOrder = 2
-=======
     Left = 231
     Height = 237
     Top = 201
@@ -138,245 +89,196 @@ object FormCalculator: TFormCalculator
       OnClick = ClearButtonClick
       TabOrder = 2
     end
->>>>>>> Stashed changes
     object DeleteButton: TButton
-      Left = 270
+      Left = 256
       Height = 25
       Top = 0
       Width = 75
-      Anchors = [akRight]
       Caption = 'Delete'
       OnClick = DeleteButtonClick
-      TabOrder = 0
-    end
-    object DivideButton: TButton
-      Left = 270
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = '÷'
-      OnClick = DivideButtonClick
-      TabOrder = 1
-    end
-    object MultiplyButton: TButton
-      Left = 270
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '×'
-      OnClick = MultiplyButtonClick
-      TabOrder = 2
-    end
-    object MinusButton: TButton
-      Left = 270
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '-'
-      OnClick = MinusButtonClick
       TabOrder = 3
     end
-    object PlusButton: TButton
-      Left = 270
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '+'
-      OnClick = PlusButtonClick
-      TabOrder = 4
-    end
-    object ResultButton: TButton
-      Left = 270
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '='
-      OnClick = ResultButtonClick
-      TabOrder = 5
-    end
-    object CommaButton: TButton
-      Left = 182
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = ','
-      OnClick = CommaButtonClick
-      TabOrder = 6
-    end
-    object ThreeButton: TButton
-      Left = 182
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '3'
-      OnClick = ThreeButtonClick
-      TabOrder = 7
-    end
-    object SixButton: TButton
-      Left = 182
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '6'
-      OnClick = SixButtonClick
-      TabOrder = 8
-    end
-    object NineButton: TButton
-      Left = 182
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '9'
-      OnClick = NineButtonClick
-      TabOrder = 9
-    end
-    object SqrtButton: TButton
-      Left = 182
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Sqrt'
-      OnClick = SqrtButtonClick
-      TabOrder = 10
-    end
-    object ClearButton: TButton
-      Left = 182
-      Height = 25
-      Top = 0
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Clear'
-      OnClick = ClearButtonClick
-      TabOrder = 11
-    end
-    object ZeroButton: TButton
-      Left = 94
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '0'
-      OnClick = ZeroButtonClick
-      TabOrder = 12
-    end
-    object TwoButton: TButton
-      Left = 94
-      Height = 25
-      Top = 160
-      Width = 75
-      Anchors = [akRight]
-      Caption = '2'
-      OnClick = TwoButtonClick
-      TabOrder = 13
-    end
-    object FiveButton: TButton
-      Left = 94
-      Height = 25
-      Top = 120
-      Width = 75
-      Anchors = [akRight]
-      Caption = '5'
-      OnClick = FiveButtonClick
-      TabOrder = 14
-    end
-    object EightButton: TButton
-      Left = 94
-      Height = 25
-      Top = 80
-      Width = 75
-      Anchors = [akRight]
-      Caption = '8'
-      OnClick = EightButtonClick
-      TabOrder = 15
-    end
-    object SquareButton: TButton
-      Left = 94
-      Height = 25
-      Top = 40
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'Sq'
-      OnClick = SquareButtonClick
-      TabOrder = 16
-    end
-    object ChangeSignButton: TButton
-      Left = 8
-      Height = 25
-      Top = 200
-      Width = 75
-      Anchors = [akRight]
-      Caption = '+/-'
-      OnClick = ChangeSignButtonClick
-      TabOrder = 17
-    end
-    object ClearAllButton: TButton
-      Left = 94
-      Height = 25
-      Top = 0
-      Width = 75
-      Anchors = [akRight]
-      Caption = 'CE'
-      OnClick = ClearAllButtonClick
-      TabOrder = 18
-    end
-    object OneButton: TButton
-      Left = 8
-      Height = 25
-      Top = 160
-      Width = 75
-      Caption = '1'
-      OnClick = OneButtonClick
-      TabOrder = 19
-    end
-    object FourButton: TButton
-      Left = 8
-      Height = 25
-      Top = 120
-      Width = 75
-      Caption = '4'
-      OnClick = FourButtonClick
-      TabOrder = 20
-    end
-    object SevenButton: TButton
-      Left = 8
-      Height = 25
-      Top = 80
-      Width = 75
-      Caption = '7'
-      OnClick = SevenButtonClick
-      TabOrder = 21
-    end
     object InverseButton: TButton
-      Left = 8
+      Left = 0
       Height = 25
       Top = 40
       Width = 75
       Caption = '1/x'
       OnClick = InverseButtonClick
+      TabOrder = 4
+    end
+    object SquareButton: TButton
+      Left = 83
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'Sq'
+      OnClick = SquareButtonClick
+      TabOrder = 5
+    end
+    object SqrtButton: TButton
+      Left = 171
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'Sqrt'
+      OnClick = SqrtButtonClick
+      TabOrder = 6
+    end
+    object DivideButton: TButton
+      Left = 256
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = '÷'
+      OnClick = DivideButtonClick
+      TabOrder = 7
+    end
+    object SevenButton: TButton
+      Left = 0
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '7'
+      OnClick = SevenButtonClick
+      TabOrder = 8
+    end
+    object EightButton: TButton
+      Left = 83
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '8'
+      OnClick = EightButtonClick
+      TabOrder = 9
+    end
+    object NineButton: TButton
+      Left = 171
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '9'
+      OnClick = NineButtonClick
+      TabOrder = 10
+    end
+    object PlusButton: TButton
+      Left = 256
+      Height = 25
+      Top = 77
+      Width = 75
+      Caption = '+'
+      OnClick = PlusButtonClick
+      TabOrder = 19
+    end
+    object FourButton: TButton
+      Left = 0
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '4'
+      OnClick = FourButtonClick
+      TabOrder = 12
+    end
+    object FiveButton: TButton
+      Left = 83
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '5'
+      OnClick = FiveButtonClick
+      TabOrder = 13
+    end
+    object SixButton: TButton
+      Left = 171
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '6'
+      OnClick = SixButtonClick
+      TabOrder = 14
+    end
+    object MultiplyButton: TButton
+      Left = 256
+      Height = 25
+      Top = 112
+      Width = 75
+      Caption = '×'
+      OnClick = MultiplyButtonClick
+      TabOrder = 11
+    end
+    object OneButton: TButton
+      Left = 0
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '1'
+      OnClick = OneButtonClick
+      TabOrder = 16
+    end
+    object TwoButton: TButton
+      Left = 83
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '2'
+      OnClick = TwoButtonClick
+      TabOrder = 17
+    end
+    object ThreeButton: TButton
+      Left = 171
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '3'
+      OnClick = ThreeButtonClick
+      TabOrder = 18
+    end
+    object MinusButton: TButton
+      Left = 256
+      Height = 25
+      Top = 152
+      Width = 75
+      Caption = '-'
+      OnClick = MinusButtonClick
+      TabOrder = 15
+    end
+    object ChangeSignButton: TButton
+      Left = 0
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '+/-'
+      OnClick = ChangeSignButtonClick
+      TabOrder = 20
+    end
+    object ZeroButton: TButton
+      Left = 83
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '0'
+      OnClick = ZeroButtonClick
+      TabOrder = 21
+    end
+    object CommaButton: TButton
+      Left = 171
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = '.'
+      OnClick = CommaButtonClick
       TabOrder = 22
     end
-    object PercentButton: TButton
-      Left = 8
+    object ResultButton: TButton
+      Left = 256
       Height = 25
-      Top = 0
+      Top = 192
       Width = 75
-      Caption = '%'
-      OnClick = PercentButtonClick
+      Caption = '='
+      OnClick = ResultButtonClick
       TabOrder = 23
     end
   end
-<<<<<<< Updated upstream
-=======
   object TrigBox: TGroupBox
     AnchorSideTop.Side = asrBottom
     Left = 31
@@ -637,5 +539,4 @@ object FormCalculator: TFormCalculator
       OnClick = Base8Click
     end
   end
->>>>>>> Stashed changes
 end

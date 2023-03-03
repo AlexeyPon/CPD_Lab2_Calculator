@@ -1,21 +1,65 @@
 msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+msgstr "Content-Type: text/plain; charset=UTF-8"
 
 #: calculator.divzero
 msgid "Cannot divide by zero"
 msgstr ""
 
+#: calculator.invalidinput
+msgid "Invalid input"
+msgstr ""
+
 #: calculator.smtwrong
 msgid "Something went wrong"
+msgstr ""
+
+#: taboutform.caption
+msgctxt "taboutform.caption"
+msgid "About"
+msgstr ""
+
+#: tformcalculator.aboutbutton.caption
+msgctxt "tformcalculator.aboutbutton.caption"
+msgid "About"
+msgstr ""
+
+#: tformcalculator.base2.caption
+msgctxt "tformcalculator.base2.caption"
+msgid "2"
+msgstr ""
+
+#: tformcalculator.base3.caption
+msgctxt "tformcalculator.base3.caption"
+msgid "3"
+msgstr ""
+
+#: tformcalculator.base4.caption
+msgctxt "tformcalculator.base4.caption"
+msgid "4"
+msgstr ""
+
+#: tformcalculator.base5.caption
+msgctxt "tformcalculator.base5.caption"
+msgid "5"
+msgstr ""
+
+#: tformcalculator.base6.caption
+msgctxt "tformcalculator.base6.caption"
+msgid "6"
+msgstr ""
+
+#: tformcalculator.base7.caption
+msgctxt "tformcalculator.base7.caption"
+msgid "7"
+msgstr ""
+
+#: tformcalculator.base8.caption
+msgctxt "tformcalculator.base8.caption"
+msgid "8"
+msgstr ""
+
+#: tformcalculator.basebutton.caption
+msgid "Base"
 msgstr ""
 
 #: tformcalculator.caption
@@ -31,14 +75,10 @@ msgid "CE"
 msgstr ""
 
 #: tformcalculator.clearbutton.caption
-msgctxt "tformcalculator.clearbutton.caption"
 msgid "Clear"
 msgstr ""
 
 #: tformcalculator.commabutton.caption
-<<<<<<< Updated upstream
-msgid ","
-=======
 msgid "."
 msgstr ""
 
@@ -64,7 +104,6 @@ msgstr ""
 
 #: tformcalculator.darkthemebutton.caption
 msgid "Dark"
->>>>>>> Stashed changes
 msgstr ""
 
 #: tformcalculator.deletebutton.caption
@@ -72,19 +111,29 @@ msgid "Delete"
 msgstr ""
 
 #: tformcalculator.dividebutton.caption
-msgctxt "tformcalculator.dividebutton.caption"
 msgid "÷"
 msgstr ""
 
 #: tformcalculator.eightbutton.caption
+msgctxt "tformcalculator.eightbutton.caption"
 msgid "8"
 msgstr ""
 
+#: tformcalculator.englishbutton.caption
+msgid "English"
+msgstr ""
+
+#: tformcalculator.factbutton.caption
+msgid "Fact"
+msgstr ""
+
 #: tformcalculator.fivebutton.caption
+msgctxt "tformcalculator.fivebutton.caption"
 msgid "5"
 msgstr ""
 
 #: tformcalculator.fourbutton.caption
+msgctxt "tformcalculator.fourbutton.caption"
 msgid "4"
 msgstr ""
 
@@ -92,15 +141,11 @@ msgstr ""
 msgid "1/x"
 msgstr ""
 
-<<<<<<< Updated upstream
-=======
 #: tformcalculator.languagebutton.caption
-msgctxt "tformcalculator.languagebutton.caption"
 msgid "Language"
 msgstr ""
 
 #: tformcalculator.lightthemebutton.caption
-msgctxt "tformcalculator.lightthemebutton.caption"
 msgid "Light"
 msgstr ""
 
@@ -116,14 +161,19 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
->>>>>>> Stashed changes
 #: tformcalculator.minusbutton.caption
-msgctxt "tformcalculator.minusbutton.caption"
 msgid "-"
 msgstr ""
 
+#: tformcalculator.modbutton.caption
+msgid "Mod"
+msgstr ""
+
+#: tformcalculator.modebutton.caption
+msgid "Mode"
+msgstr ""
+
 #: tformcalculator.multiplybutton.caption
-msgctxt "tformcalculator.multiplybutton.caption"
 msgid "×"
 msgstr ""
 
@@ -140,13 +190,15 @@ msgid "Paste"
 msgstr ""
 
 #: tformcalculator.percentbutton.caption
-msgctxt "tformcalculator.percentbutton.caption"
 msgid "%"
 msgstr ""
 
 #: tformcalculator.plusbutton.caption
-msgctxt "tformcalculator.plusbutton.caption"
 msgid "+"
+msgstr ""
+
+#: tformcalculator.powerbutton.caption
+msgid "x^y"
 msgstr ""
 
 #: tformcalculator.resultbutton.caption
@@ -157,11 +209,33 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
+#: tformcalculator.russianbutton.caption
+msgid "Russian"
+msgstr ""
+
+#: tformcalculator.scientificmodebutton.caption
+msgid "Scientific"
+msgstr ""
+
+#: tformcalculator.secbutton.caption
+msgid "Sec"
+msgstr ""
+
 #: tformcalculator.sevenbutton.caption
+msgctxt "tformcalculator.sevenbutton.caption"
 msgid "7"
 msgstr ""
 
+#: tformcalculator.simplethemebutton.caption
+msgid "Simple"
+msgstr ""
+
+#: tformcalculator.sinbutton.caption
+msgid "Sin"
+msgstr ""
+
 #: tformcalculator.sixbutton.caption
+msgctxt "tformcalculator.sixbutton.caption"
 msgid "6"
 msgstr ""
 
@@ -173,10 +247,7 @@ msgstr ""
 msgid "Sq"
 msgstr ""
 
-<<<<<<< Updated upstream
-=======
 #: tformcalculator.standardmodebutton.caption
-msgctxt "tformcalculator.standardmodebutton.caption"
 msgid "Standard"
 msgstr ""
 
@@ -188,12 +259,13 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
->>>>>>> Stashed changes
 #: tformcalculator.threebutton.caption
+msgctxt "tformcalculator.threebutton.caption"
 msgid "3"
 msgstr ""
 
 #: tformcalculator.twobutton.caption
+msgctxt "tformcalculator.twobutton.caption"
 msgid "2"
 msgstr ""
 
@@ -202,7 +274,6 @@ msgid "0"
 msgstr ""
 
 #: unit1.info
-msgctxt "unit1.info"
 msgid ""
 "Calculator v 1.0\n"
 "Made for cross-platform development course\n"

@@ -16,6 +16,10 @@ uses
 {$R *.res}
 
 begin
+<<<<<<< Updated upstream
+=======
+  //SysUtils.DecimalSeparator :=  '.';
+>>>>>>> Stashed changes
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;

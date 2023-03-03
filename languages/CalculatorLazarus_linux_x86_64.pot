@@ -26,7 +26,35 @@ msgid "Clear"
 msgstr ""
 
 #: tformcalculator.commabutton.caption
+<<<<<<< Updated upstream
 msgid ","
+=======
+msgid "."
+msgstr ""
+
+#: tformcalculator.copybutton.caption
+msgid "Copy"
+msgstr ""
+
+#: tformcalculator.copyvaluebutton.caption
+msgid "Copy Val"
+msgstr ""
+
+#: tformcalculator.cosbutton.caption
+msgid "Cos"
+msgstr ""
+
+#: tformcalculator.cotbutton.caption
+msgid "Cot"
+msgstr ""
+
+#: tformcalculator.cscbutton.caption
+msgid "Csc"
+msgstr ""
+
+#: tformcalculator.darkthemebutton.caption
+msgid "Dark"
+>>>>>>> Stashed changes
 msgstr ""
 
 #: tformcalculator.deletebutton.caption
@@ -53,6 +81,30 @@ msgstr ""
 msgid "1/x"
 msgstr ""
 
+<<<<<<< Updated upstream
+=======
+#: tformcalculator.languagebutton.caption
+msgid "Language"
+msgstr ""
+
+#: tformcalculator.lightthemebutton.caption
+msgctxt "tformcalculator.lightthemebutton.caption"
+msgid "Light"
+msgstr ""
+
+#: tformcalculator.lnbutton.caption
+msgid "ln"
+msgstr ""
+
+#: tformcalculator.logbutton.caption
+msgid "log"
+msgstr ""
+
+#: tformcalculator.menubutton.caption
+msgid "Menu"
+msgstr ""
+
+>>>>>>> Stashed changes
 #: tformcalculator.minusbutton.caption
 msgid "-"
 msgstr ""
@@ -67,6 +119,10 @@ msgstr ""
 
 #: tformcalculator.onebutton.caption
 msgid "1"
+msgstr ""
+
+#: tformcalculator.pastebutton.caption
+msgid "Paste"
 msgstr ""
 
 #: tformcalculator.percentbutton.caption
@@ -101,6 +157,22 @@ msgstr ""
 msgid "Sq"
 msgstr ""
 
+<<<<<<< Updated upstream
+=======
+#: tformcalculator.standardmodebutton.caption
+msgctxt "tformcalculator.standardmodebutton.caption"
+msgid "Standard"
+msgstr ""
+
+#: tformcalculator.tanbutton.caption
+msgid "Tan"
+msgstr ""
+
+#: tformcalculator.themebutton.caption
+msgid "Theme"
+msgstr ""
+
+>>>>>>> Stashed changes
 #: tformcalculator.threebutton.caption
 msgid "3"
 msgstr ""
@@ -111,5 +183,12 @@ msgstr ""
 
 #: tformcalculator.zerobutton.caption
 msgid "0"
+msgstr ""
+
+#: unit1.info
+msgid ""
+"Calculator v 1.0\n"
+"Made for cross-platform development course\n"
+"© Ponomarev Alexey 2023"
 msgstr ""
 
