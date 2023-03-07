@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="12"/>
     <ManyBuildModesSelection Value="&quot;Linux x64 Release&quot;,&quot;Windows x64 Release&quot;,&quot;Android Release&quot;"/>
-    <BuildModes Active="Android Release"/>
+    <BuildModes Active="Windows x64 Release"/>
     <Units>
       <Unit>
         <Filename Value="CalculatorLazarus.lpr"/>

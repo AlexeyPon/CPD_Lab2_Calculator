@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="12"/>
     <ManyBuildModesSelection Value="&quot;Linux x64 Release&quot;,&quot;Windows x64 Release&quot;,&quot;Android Release&quot;"/>
-    <BuildModes Active="Windows x64 Release"/>
+    <BuildModes Active="MacOs x86_64 Release"/>
     <Units>
       <Unit>
         <Filename Value="CalculatorLazarus.lpr"/>
@@ -22,7 +22,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Calculator"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="581"/>
+        <TopLine Value="588"/>
         <CursorPos X="25" Y="608"/>
         <UsageCount Value="82"/>
         <Loaded Value="True"/>

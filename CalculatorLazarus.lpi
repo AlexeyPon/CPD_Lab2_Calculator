@@ -82,7 +82,7 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <Item Name="MacOs Release">
+      <Item Name="MacOs x86_64 Release">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -109,9 +109,6 @@
         </CompilerOptions>
       </Item>
       <Item Name="Android Release">
-        <MacroValues Count="1">
-          <Macro1 Name="LCLWidgetType" Value="customdrawn"/>
-        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -137,8 +134,34 @@
           </Linking>
         </CompilerOptions>
       </Item>
+      <Item Name="MacOs M1 Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="CalculatorLazarus_$(TargetOS)_$(TargetCPU)"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="aarch64"/>
+            <TargetOS Value="macos"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item>
       <SharedMatrixOptions Count="1">
-        <Item1 ID="075427291897" Modes="Android Release" Type="IDEMacro" MacroName="LCLWidgetType" Value="customdrawn"/>
+        <Item1 ID="075427291897" Type="IDEMacro"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
