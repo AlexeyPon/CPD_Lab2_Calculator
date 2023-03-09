@@ -82,7 +82,10 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <Item Name="MacOs Release">
+      <Item Name="MacOs x86_64 Release">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="cocoa"/>
+        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -95,7 +98,7 @@
           </SearchPaths>
           <CodeGeneration>
             <TargetCPU Value="x86_64"/>
-            <TargetOS Value="macos"/>
+            <TargetOS Value="darwin"/>
             <Optimizations>
               <OptimizationLevel Value="2"/>
             </Optimizations>
@@ -109,9 +112,6 @@
         </CompilerOptions>
       </Item>
       <Item Name="Android Release">
-        <MacroValues Count="1">
-          <Macro1 Name="LCLWidgetType" Value="customdrawn"/>
-        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -137,8 +137,38 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <SharedMatrixOptions Count="1">
-        <Item1 ID="075427291897" Modes="Android Release" Type="IDEMacro" MacroName="LCLWidgetType" Value="customdrawn"/>
+      <Item Name="MacOs M1 Release">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="cocoa"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="CalculatorLazarus_$(TargetOS)_$(TargetCPU)"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="aarch64"/>
+            <TargetOS Value="darwin"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <SharedMatrixOptions Count="2">
+        <Item1 ID="075427291897" Type="IDEMacro"/>
+        <Item2 ID="789740205376" Modes="MacOs x86_64 Release,MacOs M1 Release" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>

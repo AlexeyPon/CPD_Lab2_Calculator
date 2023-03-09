@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="G:\Lazarus\fpc\bin\x86_64-win64\fpc.exe" Date="1449752604"/>
+  <Params Value=" -Tdarwin -Paarch64 -MObjFPC -Scghi -O2 -k-framework -kCocoa -l -vewnhibq -FiG:\GitHub\CPD_Lab2_Calculator\lib\aarch64-darwin -FuG:\Lazarus\lazarus\lcl\units\aarch64-darwin\cocoa -FuG:\Lazarus\lazarus\lcl\units\aarch64-darwin -FuG:\Lazarus\lazarus\components\freetype\lib\aarch64-darwin -FuG:\Lazarus\lazarus\components\lazutils\lib\aarch64-darwin -FuG:\Lazarus\lazarus\packager\units\aarch64-darwin -FuG:\GitHub\CPD_Lab2_Calculator\ -FUG:\GitHub\CPD_Lab2_Calculator\lib\aarch64-darwin\ -FEG:\GitHub\CPD_Lab2_Calculator\ -oG:\GitHub\CPD_Lab2_Calculator\CalculatorLazarus_darwin_aarch64 -dLCL -dLCLcocoa CalculatorLazarus.lpr"/>
+</CONFIG>

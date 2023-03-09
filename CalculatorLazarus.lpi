@@ -83,6 +83,9 @@
         </CompilerOptions>
       </Item>
       <Item Name="MacOs x86_64 Release">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="cocoa"/>
+        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -95,7 +98,7 @@
           </SearchPaths>
           <CodeGeneration>
             <TargetCPU Value="x86_64"/>
-            <TargetOS Value="macos"/>
+            <TargetOS Value="darwin"/>
             <Optimizations>
               <OptimizationLevel Value="2"/>
             </Optimizations>
@@ -135,6 +138,9 @@
         </CompilerOptions>
       </Item>
       <Item Name="MacOs M1 Release">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="cocoa"/>
+        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -147,7 +153,7 @@
           </SearchPaths>
           <CodeGeneration>
             <TargetCPU Value="aarch64"/>
-            <TargetOS Value="macos"/>
+            <TargetOS Value="darwin"/>
             <Optimizations>
               <OptimizationLevel Value="2"/>
             </Optimizations>
@@ -160,8 +166,9 @@
           </Linking>
         </CompilerOptions>
       </Item>
-      <SharedMatrixOptions Count="1">
+      <SharedMatrixOptions Count="2">
         <Item1 ID="075427291897" Type="IDEMacro"/>
+        <Item2 ID="789740205376" Modes="MacOs x86_64 Release,MacOs M1 Release" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
